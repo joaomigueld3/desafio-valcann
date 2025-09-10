@@ -1,0 +1,23 @@
+{
+  "name": "desafio-valcann",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaomigueld3/desafio-valcann.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaomigueld3/desafio-valcann/issues"
+  },
+  "homepage": "https://github.com/joaomigueld3/desafio-valcann#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
