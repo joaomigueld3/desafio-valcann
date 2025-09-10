@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "type": "module",
   "description": "desafio backend valcann",
+  "type": "module",
+  "description": "desafio backend valcann",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon src/index.js",
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .js,.jsx",
@@ -26,6 +29,9 @@
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
     "morgan": "^1.10.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
