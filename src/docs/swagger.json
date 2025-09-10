@@ -1,0 +1,78 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "User API",
+    "version": "1.0.0",
+    "description": "API de leitura de usuários (desafio back-end)"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Lista usuários com filtros e paginação",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "schema": { "type": "integer" },
+            "description": "Página (default 1)"
+          },
+          {
+            "in": "query",
+            "name": "page_size",
+            "schema": { "type": "integer" },
+            "description": "Tamanho da página (default 10, máx 50)"
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "schema": { "type": "string" },
+            "description": "Busca por nome ou email"
+          },
+          {
+            "in": "query",
+            "name": "role",
+            "schema": { "type": "string" },
+            "description": "Filtrar por role"
+          },
+          {
+            "in": "query",
+            "name": "is_active",
+            "schema": { "type": "boolean" },
+            "description": "Filtrar se ativo"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista paginada de usuários"
+          }
+        }
+      }
+    },
+    "/users/{id}": {
+      "get": {
+        "summary": "Retorna um usuário por ID",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Usuário encontrado"
+          },
+          "404": {
+            "description": "Usuário não encontrado"
+          }
+        }
+      }
+    }
+  }
+}
